@@ -1,0 +1,2 @@
+db.movies_grey_angel.deleteOne(
+  {'title' : 'Titanic'})
