@@ -402,3 +402,13 @@ db.movies.insertMany([
 To read documents in the collection:
 
 `db.movies.find( {} )`
+
+#### Insert Behavior
+
+To learn more about the specific behavior of inserting documents, see [Insert Behavior](https://www.mongodb.com/docs/manual/tutorial/insert-documents/#std-label-write-op-insert-behavior).
+
+Learn More
+
+To see more examples of inserting documents into a collection, see the [insertOne()](https://www.mongodb.com/docs/manual/reference/method/db.collection.insertOne/#mongodb-method-db.collection.insertOne) and [db.collection.insertMany()](https://www.mongodb.com/docs/manual/reference/method/db.collection.insertMany/#mongodb-method-db.collection.insertMany) method pages.
+
+To see all available methods to insert documents into a collection, see [Additional Methods for Inserts](https://www.mongodb.com/docs/manual/reference/insert-methods/#additional-inserts)
