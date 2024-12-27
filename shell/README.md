@@ -112,3 +112,26 @@ prompt = function() {
     return (cmdCount++) + "> ";
 }
 ```
+
+The prompt will look like this:
+
+```
+1> show collections
+2> use test
+3>
+```
+
+### Display Database and Hostname
+
+The current database name is part of the default mongosh prompt. To reformat the prompt to show the database and hostname, use a function like this one:
+
+```
+{
+   const hostnameSymbol = Symbol('hostname');
+   prompt = () => {
+      if (!db[hostnameSymbol])
+         db[hostnameSymbol] = db.serverStatus().host;
+      return `${db.getName()}@${db[hostnameSymbol]}> `;
+   };
+}
+```
