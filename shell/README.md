@@ -201,3 +201,13 @@ Enable telemetry for mongosh.
 The command response confirms that telemetry is enabled:
 
 `Telemetry is now enabled.`
+
+### Run Commands
+
+To run commands in mongosh, you must first connect to a MongoDB deployment.
+
+### Format Input and Output
+
+mongosh uses the [Node.js BSON parser](https://www.npmjs.com/package/bson) parser to parse BSON data. You can use the parser's [EJSON](https://www.npmjs.com/package/bson#EJSON) interface to transform your data when you work with mongosh.
+
+For examples that use EJSON, see: [EJSON](https://www.npmjs.com/package/bson#EJSON).
