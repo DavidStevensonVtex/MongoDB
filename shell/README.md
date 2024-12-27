@@ -95,3 +95,20 @@ Configuration File Location
 
 * Windows - mongosh.cfg, in the same directory as the mongosh.exe binary.
 * Linux - /etc/mongosh.conf
+
+### Customize the mongosh Prompt
+
+By default the mongosh prompt includes the current database name. You can modify the prompt variable to display custom strings or to return dynamic information about your mongosh session.
+
+Custom prompts are not stored when you exit mongosh. To have a custom prompt persist through restarts, add the code for your custom prompt to [.mongoshrc.js](https://www.mongodb.com/docs/mongodb-shell/mongoshrc/#std-label-mongoshrc-js).
+
+### Display Line Numbers
+
+To display line numbers in the mongosh prompt, run the following code inside mongosh:
+
+```
+let cmdCount = 1;
+prompt = function() {
+    return (cmdCount++) + "> ";
+}
+```
