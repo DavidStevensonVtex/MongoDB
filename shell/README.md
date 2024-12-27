@@ -147,3 +147,28 @@ prompt = function() {
             " > ";
 }
 ```
+
+## Configure Telemetry Options
+
+mongosh collects anonymous aggregated usage data to improve MongoDB products. mongosh collects this information by default, but you can disable this data collection at any time.
+
+Data Tracked by mongosh
+mongosh tracks the following data:
+
+* The type of MongoDB mongosh is connected to. For example, Enterprise Edition, Community Edition, or Atlas Data Lake.
+
+* The methods run in mongosh. mongosh only tracks the names of the methods, and does not track any arguments supplied to methods.
+
+* Whether users run scripts with mongosh.
+
+* Errors.
+
+mongosh does not track:
+
+* IP addresses, hostnames, usernames, or credentials.
+
+* Queries run in mongosh.
+
+* Any data stored in your MongoDB deployment.
+
+* Personal identifiable information.
