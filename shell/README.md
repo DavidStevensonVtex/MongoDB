@@ -172,3 +172,32 @@ mongosh does not track:
 * Any data stored in your MongoDB deployment.
 
 * Personal identifiable information.
+
+### Toggle Telemetry Collection
+Use the following methods in mongosh to toggle telemetry data collection.
+
+**disableTelemetry()**
+
+Disable telemetry for mongosh.
+
+`disableTelemetry()`
+
+The command response confirms that telemetry is disabled:
+
+`Telemetry is now disabled.`
+
+Tip: You can also disable telemetry at startup by using the --eval startup option.
+
+The following command starts mongosh with telemetry disabled:
+
+`mongosh --nodb --eval "disableTelemetry()"`
+
+**enableTelemetry()**
+
+Enable telemetry for mongosh.
+
+`enableTelemetry()`
+
+The command response confirms that telemetry is enabled:
+
+`Telemetry is now enabled.`
