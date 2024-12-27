@@ -257,3 +257,7 @@ There is no way to terminate asynchronous code in mongosh. This is the same beha
 Pressing `Ctrl + C` once will not exit mongosh, press `Ctrl + C` twice to exit mongosh.
 
 You can also terminate a script from within the script code by calling the exit(`<code>`) command. For more information, refer to [Terminate a Script on Error](https://www.mongodb.com/docs/mongodb-shell/write-scripts/#std-label-mongosh-terminate-script).
+
+### Command Exceptions
+
+For commands whose output includes `{ ok: 0 }`, mongosh returns a consistent exception and omits the server raw output. The legacy mongo shell returns output that varies for each command.
