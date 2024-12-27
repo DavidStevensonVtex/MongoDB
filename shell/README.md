@@ -310,3 +310,46 @@ The MongoDB shell provides the following methods to insert documents into a coll
 * To insert multiple documents, use db.collection.insertMany().
 
 The examples on this page reference the [Atlas sample dataset](https://www.mongodb.com/docs/atlas/sample-data/). You can create a free Atlas cluster and populate that cluster with sample data to follow along with these examples. To learn more, see [Get Started with Atlas](https://www.mongodb.com/docs/atlas/).
+
+#### Insert a Single Document
+
+[db.collection.insertOne()](https://www.mongodb.com/docs/manual/reference/method/db.collection.insertOne/#mongodb-method-db.collection.insertOne) inserts a single document into a collection. If the document does not specify an _id field, MongoDB adds the _id field with an ObjectId value to the new document. See [Insert Behavior](https://www.mongodb.com/docs/manual/tutorial/insert-documents/#std-label-write-op-insert-behavior).
+
+```
+use sample_mflix
+
+db.movies.insertOne(
+  {
+    title: "The Favourite",
+    genres: [ "Drama", "History" ],
+    runtime: 121,
+    rated: "R",
+    year: 2018,
+    directors: [ "Yorgos Lanthimos" ],
+    cast: [ "Olivia Colman", "Emma Stone", "Rachel Weisz" ],
+    type: "movie"
+  }
+)
+
+{
+  acknowledged: true,
+  insertedId: ObjectId('676e150f9a13ef38a5567a2c')
+}
+```
+
+```
+db.movies.find({ title: "The Favourite" })
+[
+  {
+    _id: ObjectId('676e150f9a13ef38a5567a2c'),
+    title: 'The Favourite',
+    genres: [ 'Drama', 'History' ],
+    runtime: 121,
+    rated: 'R',
+    year: 2018,
+    directors: [ 'Yorgos Lanthimos' ],
+    cast: [ 'Olivia Colman', 'Emma Stone', 'Rachel Weisz' ],
+    type: 'movie'
+  }
+]
+```
