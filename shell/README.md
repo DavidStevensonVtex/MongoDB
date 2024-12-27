@@ -226,3 +226,26 @@ To switch databases, issue the use `<db>` helper, as in the following example:
 To access a different database from the current database without switching your current database context, see the [db.getSiblingDB()](https://www.mongodb.com/docs/manual/reference/method/db.getSiblingDB/#mongodb-method-db.getSiblingDB) method.
 
 To list the databases available to the user, use the helper `show dbs`.
+
+### Create a New Database and Collection
+
+To create a new database, issue the use `<db>` command with the database that you would like to create. For example, the following commands create both the database myNewDatabase and the collection myCollection using the `insertOne()` operation:
+
+```
+use myNewDatabase
+db.myCollection.insertOne( { x: 1 } );
+```
+
+If a collection does not exist, MongoDB creates the collection when you first store data for that collection.
+
+### Terminate a Running Command
+
+To terminate a running command or query in mongosh, press `Ctrl + C`.
+
+When you enter `Ctrl + C`, mongosh:
+
+* interrupts the active command,
+* tries to terminate the ongoing, server-side operation, and
+* returns a command prompt.
+
+If mongosh cannot cleanly terminate the running process, it issues a warning.
