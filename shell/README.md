@@ -39,3 +39,12 @@ Map(16) {
   'updateURL' => 'https://downloads.mongodb.com/compass/mongosh.json'
 
 ```
+
+Return the current value for <property>:
+
+config.get( "<property>" )
+
+```
+> config.get("editor");
+vi
+```
