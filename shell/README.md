@@ -72,3 +72,21 @@ null
 ```
 
 [Supported property parameters](https://www.mongodb.com/docs/mongodb-shell/reference/configure-shell-settings-api/)
+
+
+### Behavior with Configuration File
+
+Settings specified with the config API:
+
+* Override settings specified in the [configuration file](https://www.mongodb.com/docs/mongodb-shell/reference/configure-shell-settings-global/#std-label-configure-settings-global).
+
+* Persist across restarts.
+
+Example Configuration File
+
+```
+mongosh:
+  displayBatchSize: 50
+  inspectDepth: 20
+  redactHistory: "remove-redact"
+```
