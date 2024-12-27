@@ -261,3 +261,7 @@ You can also terminate a script from within the script code by calling the exit(
 ### Command Exceptions
 
 For commands whose output includes `{ ok: 0 }`, mongosh returns a consistent exception and omits the server raw output. The legacy mongo shell returns output that varies for each command.
+
+### Clear the mongosh Console
+
+The cls command clears the console. You can also clear the console with `Ctrl + L` and `console.clear()`.
