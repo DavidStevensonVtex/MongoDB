@@ -293,3 +293,11 @@ Update operations modify existing documents in a collection. You can update a si
 You can specify criteria, or filters, that identify the documents to update. These filters use the same syntax as read operations.
 
 For examples, see [Update Documents](https://www.mongodb.com/docs/mongodb-shell/crud/update/#std-label-mongosh-update).
+
+### Delete Operations
+
+Delete operations remove existing documents from a collection. You can remove a single document or multiple documents in a single operation.
+
+You can specify criteria, or filters, that identify the documents to remove. These filters use the same syntax as read operations.
+
+For examples, see [Delete Documents](https://www.mongodb.com/docs/mongodb-shell/crud/delete/#std-label-mongosh-delete).
