@@ -301,3 +301,12 @@ Delete operations remove existing documents from a collection. You can remove a 
 You can specify criteria, or filters, that identify the documents to remove. These filters use the same syntax as read operations.
 
 For examples, see [Delete Documents](https://www.mongodb.com/docs/mongodb-shell/crud/delete/#std-label-mongosh-delete).
+
+### Insert Documents
+
+The MongoDB shell provides the following methods to insert documents into a collection:
+
+* To insert a single document, use db.collection.insertOne().
+* To insert multiple documents, use db.collection.insertMany().
+
+The examples on this page reference the [Atlas sample dataset](https://www.mongodb.com/docs/atlas/sample-data/). You can create a free Atlas cluster and populate that cluster with sample data to follow along with these examples. To learn more, see [Get Started with Atlas](https://www.mongodb.com/docs/atlas/).
