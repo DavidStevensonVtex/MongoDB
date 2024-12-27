@@ -48,3 +48,14 @@ config.get( "<property>" )
 > config.get("editor");
 vi
 ```
+
+Change the current setting of <property> to <value>:
+
+config.set( "<property>", <value> )
+
+```
+> config.set( "editor", "nano" );
+Setting "editor" has been changed
+> config.get("editor");
+nano
+```
