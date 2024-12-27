@@ -353,3 +353,52 @@ db.movies.find({ title: "The Favourite" })
   }
 ]
 ```
+
+#### Insert Multiple Documents
+
+[db.collection.insertMany()](https://www.mongodb.com/docs/manual/reference/method/db.collection.insertMany/#mongodb-method-db.collection.insertMany) can insert multiple documents into a collection. Pass an array of documents to the method. If the documents do not specify an _id field, MongoDB adds the _id field with an ObjectId value to each document. See Insert Behavior.
+
+Example
+
+To insert two new documents into the sample_mflix.movies collection:
+
+```
+use sample_mflix
+
+db.movies.insertMany([
+   {
+      title: "Jurassic World: Fallen Kingdom",
+      genres: [ "Action", "Sci-Fi" ],
+      runtime: 130,
+      rated: "PG-13",
+      year: 2018,
+      directors: [ "J. A. Bayona" ],
+      cast: [ "Chris Pratt", "Bryce Dallas Howard", "Rafe Spall" ],
+      type: "movie"
+    },
+    {
+      title: "Tag",
+      genres: [ "Comedy", "Action" ],
+      runtime: 105,
+      rated: "R",
+      year: 2018,
+      directors: [ "Jeff Tomsic" ],
+      cast: [ "Annabelle Wallis", "Jeremy Renner", "Jon Hamm" ],
+      type: "movie"
+    }
+])
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('676e17469a13ef38a5567a2d'),
+    '1': ObjectId('676e17469a13ef38a5567a2e')
+  }
+}
+```
+
+[insertMany()](https://www.mongodb.com/docs/manual/reference/method/db.collection.insertMany/#mongodb-method-db.collection.insertMany) returns a document that includes the newly inserted documents' _id field values.
+
+To read documents in the collection:
+
+`db.movies.find( {} )`
