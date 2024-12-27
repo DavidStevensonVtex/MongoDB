@@ -59,3 +59,14 @@ Setting "editor" has been changed
 > config.get("editor");
 nano
 ```
+
+Reset a <property> to the default value:
+
+config.reset( "<property>" )
+
+```
+> config.reset( "editor" )
+Setting "editor" has been reset to its default value
+> config.get("editor")
+null
+```
