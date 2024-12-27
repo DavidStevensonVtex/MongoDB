@@ -412,3 +412,5 @@ Learn More
 To see more examples of inserting documents into a collection, see the [insertOne()](https://www.mongodb.com/docs/manual/reference/method/db.collection.insertOne/#mongodb-method-db.collection.insertOne) and [db.collection.insertMany()](https://www.mongodb.com/docs/manual/reference/method/db.collection.insertMany/#mongodb-method-db.collection.insertMany) method pages.
 
 To see all available methods to insert documents into a collection, see [Additional Methods for Inserts](https://www.mongodb.com/docs/manual/reference/insert-methods/#additional-inserts)
+
+### [Query Documents](https://www.mongodb.com/docs/mongodb-shell/crud/read/)
