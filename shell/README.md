@@ -202,7 +202,7 @@ The command response confirms that telemetry is enabled:
 
 `Telemetry is now enabled.`
 
-### Run Commands
+## Run Commands
 
 To run commands in mongosh, you must first connect to a MongoDB deployment.
 
@@ -211,3 +211,18 @@ To run commands in mongosh, you must first connect to a MongoDB deployment.
 mongosh uses the [Node.js BSON parser](https://www.npmjs.com/package/bson) parser to parse BSON data. You can use the parser's [EJSON](https://www.npmjs.com/package/bson#EJSON) interface to transform your data when you work with mongosh.
 
 For examples that use EJSON, see: [EJSON](https://www.npmjs.com/package/bson#EJSON).
+
+### Switch Databases
+To display the database you are using, type db:
+
+`db`
+
+The operation should return test, which is the default database.
+
+To switch databases, issue the use `<db>` helper, as in the following example:
+
+`use <database>`
+
+To access a different database from the current database without switching your current database context, see the [db.getSiblingDB()](https://www.mongodb.com/docs/manual/reference/method/db.getSiblingDB/#mongodb-method-db.getSiblingDB) method.
+
+To list the databases available to the user, use the helper `show dbs`.
