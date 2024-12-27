@@ -135,3 +135,15 @@ The current database name is part of the default mongosh prompt. To reformat the
    };
 }
 ```
+
+### Display System Up Time and Document Count
+
+To create a prompt that shows the system uptime and a count of documents across all collections in the current database, use a function like this one:
+
+```
+prompt = function() {
+    return "Uptime:" + db.serverStatus().uptime +
+            " Documents:" + db.stats().objects +
+            " > ";
+}
+```
