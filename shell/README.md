@@ -277,3 +277,11 @@ Create or insert operations add new documents to a collection. If the collection
 You can insert a single document or multiple documents in a single operation.
 
 For examples, see [Insert Documents](https://www.mongodb.com/docs/mongodb-shell/crud/insert/#std-label-mongosh-insert).
+
+### Read Operations
+
+Read operations retrieve documents from a collection; i.e. query a collection for documents.
+
+You can specify criteria, or filters, that identify the documents to return.
+
+For examples, see [Query Documents](https://www.mongodb.com/docs/mongodb-shell/crud/read/#std-label-mongosh-read).
