@@ -13,8 +13,13 @@ mongosh "mongodb://127.0.0.1:27017/"
 
 ## Configuration
 
+### Syntax
+
+Print the current mongosh configuration:
+
+config
+
 ```
-> config
 Map(16) {
   'displayBatchSize' => 20,
   'maxTimeMS' => null,
