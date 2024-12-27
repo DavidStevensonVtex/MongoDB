@@ -90,3 +90,8 @@ mongosh:
   inspectDepth: 20
   redactHistory: "remove-redact"
 ```
+
+Configuration File Location
+
+* Windows - mongosh.cfg, in the same directory as the mongosh.exe binary.
+* Linux - /etc/mongosh.conf
