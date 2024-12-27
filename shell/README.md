@@ -249,3 +249,11 @@ When you enter `Ctrl + C`, mongosh:
 * returns a command prompt.
 
 If mongosh cannot cleanly terminate the running process, it issues a warning.
+
+Note: Pressing `Ctrl + C` in mongosh does not terminate asynchronous code. Asynchronous operations such as setTimeout or operations like fs.readFile continue to run.
+
+There is no way to terminate asynchronous code in mongosh. This is the same behavior as in the Node.js REPL.
+
+Pressing `Ctrl + C` once will not exit mongosh, press `Ctrl + C` twice to exit mongosh.
+
+You can also terminate a script from within the script code by calling the exit(`<code>`) command. For more information, refer to [Terminate a Script on Error](https://www.mongodb.com/docs/mongodb-shell/write-scripts/#std-label-mongosh-terminate-script).
