@@ -70,3 +70,5 @@ Setting "editor" has been reset to its default value
 > config.get("editor")
 null
 ```
+
+[Supported property parameters](https://www.mongodb.com/docs/mongodb-shell/reference/configure-shell-settings-api/)
