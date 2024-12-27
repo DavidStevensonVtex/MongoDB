@@ -264,4 +264,16 @@ For commands whose output includes `{ ok: 0 }`, mongosh returns a consistent exc
 
 ### Clear the mongosh Console
 
-The cls command clears the console. You can also clear the console with `Ctrl + L` and `console.clear()`.
+The `cls` command clears the console. You can also clear the console with `Ctrl + L` and `console.clear()`.
+
+## Perform CRUD Operations
+
+CRUD operations create, read, update, and delete documents.
+
+### Create Operations
+
+Create or insert operations add new documents to a collection. If the collection does not exist, create operations also create the collection.
+
+You can insert a single document or multiple documents in a single operation.
+
+For examples, see [Insert Documents](https://www.mongodb.com/docs/mongodb-shell/crud/insert/#std-label-mongosh-insert).
